@@ -119,7 +119,19 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-
-        System.out.println("printJobs is not implemented yet");
+        //System.out.println("printJobs is only sorta implemented, be nice");
+        for (int i = 0; i < someJobs.size(); i++){
+            System.out.println("*****");
+            for (Map.Entry<String, String> set : someJobs.get(i).entrySet()) {
+                // Printing all elements of a Map
+                //if(){
+                    System.out.println(set.getKey() + ": " + set.getValue());
+                //} else {
+                //   System.out.println("No Results");
+                //} //Really not sure what logic to use here, come back to this.
+            }
+            System.out.println("*****");
+            System.out.println("");
+        }
     }
 }
