@@ -112,7 +112,6 @@ public class JobData {
 
         // load data, if not already loaded
         loadData();
-        // TODO - Dissect how this works
 
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
@@ -138,16 +137,15 @@ public class JobData {
 
         // load data, if not already loaded
         loadData();
-        String aValue = value.toLowerCase();
+        String aValue = value.toLowerCase(); //translates value to lower case
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
         //HashMap<String, String> returnedJobs = new HashMap<>();
 
         for (HashMap<String, String> allJob : allJobs) { //accesses the all jobs arraylist
-            // TODO - Now that you're accessing all data in the array list thru this loop, search for term.
             //System.out.println(aValue);
             //System.out.println(aResult);
             for (String j : allJob.values()) {
-                String aResult = j.toLowerCase();
+                String aResult = j.toLowerCase(); //translates result to lower case for comparison
                 //System.out.println(aValue);
                 //System.out.println(aResult);
                 if (aResult.contains(aValue)) {
